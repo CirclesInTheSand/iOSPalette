@@ -2,7 +2,7 @@
 
 ## 0.1 TODO
 
-Please open an issue if you want some new feature.
+Please open an issue if you want some new feature！
 
 ## 0.2 Change Log
 
