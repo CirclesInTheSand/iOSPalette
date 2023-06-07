@@ -20,4 +20,22 @@
     [palette startToAnalyzeForTargetMode:mode withCallBack:block];
 }
 
+- (void)getFilmMainColor:(void (^)(UIColor *color, NSDictionary *colorDic, NSError *error))colorBlock {
+    
+    [self getPaletteImageColorWithMode:ALL_MODE_PALETTE withCallBack:^(PaletteColorModel *recommendColor, NSDictionary *allModeColorDic, NSError *error) {
+        NSArray *colorKeysArr = @[@"light_vibrant", @"light_muted", @"vibrant", @"muted", @"dark_vibrant", @"dark_muted"];
+        
+        for(NSString *colorKey in colorKeysArr) {
+            PaletteColorModel *model = allModeColorDic[colorKey];
+            if([model isKindOfClass:PaletteColorModel.class]) {
+                colorBlock(model.color, allModeColorDic, error);
+                return;
+            }
+        }
+        
+        colorBlock(nil, allModeColorDic, error);
+    }];
+
+}
+
 @end

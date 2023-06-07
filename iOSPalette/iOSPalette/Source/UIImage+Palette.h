@@ -19,4 +19,5 @@
 
 - (void)getPaletteImageColorWithMode:(PaletteTargetMode)mode withCallBack:(GetColorBlock)block;
 
+- (void)getFilmMainColor:(void (^)(UIColor *color, NSDictionary *colorDic, NSError *error))colorBlock;
 @end
