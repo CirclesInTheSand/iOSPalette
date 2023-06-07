@@ -7,5 +7,5 @@ Pod::Spec.new do |s|
     s.authors      = {'CirclesInTheSand' => '396582310@qq.com'}
     s.platform     = :ios, '9.0'
     s.source       = {:git => 'https://github.com/CirclesInTheSand/iOSPalette.git', :tag => s.version}
-    s.source_files = 'iOSPalette/iOSPalette/Source/*.swift'
+    s.source_files = 'iOSPalette/iOSPalette/Source/*.swift', 'iOSPalette/iOSPalette/Source/**/*.{h,m}'
 end
