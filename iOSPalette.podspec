@@ -8,4 +8,9 @@ Pod::Spec.new do |s|
     s.platform     = :ios, '9.0'
     s.source       = {:git => 'https://github.com/CirclesInTheSand/iOSPalette.git', :tag => s.version}
     s.source_files = 'iOSPalette/iOSPalette/Source/*.{h,m}'
+    
+    s.subspec "Model" do |a|
+        a.source_files = "iOSPalette/iOSPalette/Source/Model/*"
+    end
+
 end
